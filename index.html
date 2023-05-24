@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Belly Button Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <link href="static/css/styles.css"  rel="stylesheet" >
+</head>
+
+<body  style="background-color:rgb(3, 173, 69);">
+  <div class="row">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center", style = "background-image: 
+      url('static/images/greenBacteria.jpg'); 
+      background-size: cover; background-position: center; color: rgb(0, 0, 12);">
+        <h1 class="box"><b>Belly Button Biodiversity Dashboard</b></h1>
+        <p class="bg-success text-black">Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+
+  </div>
+    <div class="container">
+      <div class="row"> 
+        <div class="col-md-12">
+          <div class="box1">
+           
+            <p><h3>
+              Food startup Improbable Beef has partnered with a prominent microbiology lab 
+              to research and indentify bacterial species that have the ability
+              to synthesize proteins that taste like beef. Other labs across the country have had success in synthesizing
+              meat from algae, fungi, and microorganisms found on plant roots.  <br><br><p>This study was completed to 
+              test the hypothesis that ideal bacterial species to make the best tasting syntehtic beef can be found in the belly button. 
+              Samples have been taken from partiipants across the country. <br><br><p>Participants are assigned an id number. This dashboard 
+              allows participants to see which bacteria live in their navel. <br><br><p></p>
+
+             By selecting an ID number from the dropdown, demographic information on the participant and visualizations of 
+             sample results can be viewed. 
+
+            </h3></p>
+          </div><br>
+          <div class="container">
+            <div class="row"> 
+          <div class="col-md-12">
+          <div class="topnav">         
+            <a href="#bar">Top 10 Bacteria</a>
+            <a href="#gauge">Washing Frequency</a>
+            <a href="#bubble">Sample Info</a>
+          </div><br>
+        </div>
+        <div class="row">
+         <div class="col-md-3">
+        <div class="well">
+          <h4><center>Select your ID No to see your results</center></h4>
+          <h2><center> <select id="selDataset" onchange="optionChanged(this.value)"></select></center></h2>
+            <!-- <p><h2><center><select id="selDataset" onchange="optionChanged(this.value)"></select></center></h2></p> -->
+        </div>
+        <div class="col-md-8"></div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <div class="col-md-3"></div>
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div id="gauge">
+          </div>
+          </div>
+          <div class="col-md-3">
+          <p><h3><br><br><br>This graph shows the the number of times you reported 
+            washing your belly button per week</h3></p>
+        
+        </div>
+      </div><br>
+      <div class="row">
+      <div class="col-md-12">
+        <div id="bar"></div>
+        <p><h3>This graph shows the top 10 bacteria (OTU) found in your belly button.
+     The microbial species are also called operational taxonomic units, or OTUs, in the study.<br></h3></p>
+      </div>
+
+    </div><br><br>
+
+  
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+        <p><h3>This graph shows cultures per sample. If you hover near the bubble, 
+          details of the bacteria id, number of bacteria found and scientific name are displayed. </h3></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="static/js/charts.js"></script>
+
+</body>
+
+</html>
